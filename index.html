@@ -19,7 +19,7 @@
 .hero{min-height:100vh;background:var(--cream);display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 8%}.hero-copy h2{font:500 clamp(65px,10vw,130px)/.78 var(--serif);color:var(--green);margin:28px 0}.hero-copy .amp{font:italic 42px var(--script);color:var(--wine)}.hero-copy p{max-width:310px;font-size:12px;line-height:1.9;letter-spacing:.08em}.hero-photo{min-height:650px;position:relative}.hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.hero-photo:after{content:"";position:absolute;inset:18px;border:1px solid #f5efdf9c;pointer-events:none}
 .quote{background:var(--wine);color:var(--cream);text-align:center;padding:95px 20px}.quote blockquote{max-width:700px;margin:22px auto;font:italic 28px/1.45 var(--serif)}.quote .script{font-size:40px;color:var(--gold)}
 /* profile */
-.couple{background:var(--cream)}.profiles{display:grid;grid-template-columns:1fr 1fr;gap:70px;max-width:850px;margin:50px auto 0}.profile{max-width:340px;margin:auto}.profile-photo{height:420px;overflow:hidden;border:10px solid var(--paper);outline:1px solid var(--gold);outline-offset:-5px}.profile-photo img{width:100%;height:100%;object-fit:cover}.profile h3{font:500 52px/.95 var(--serif);color:var(--wine);margin:25px 0 8px}.profile p{font-size:12px;line-height:1.8;color:#766e60}.profile .script{font-size:30px;color:var(--gold)}
+.couple{background:var(--cream);isolation:isolate}.couple:before{content:"";position:absolute;inset:0;background:url("images/foto-cover.jpg") center/cover no-repeat;filter:blur(8px);opacity:.13;transform:scale(1.04);z-index:-2}.couple:after{content:"";position:absolute;inset:0;background:rgba(245,239,223,.78);z-index:-1;pointer-events:none}.profiles{display:grid;grid-template-columns:1fr 1fr;gap:70px;max-width:850px;margin:50px auto 0}.profile{max-width:340px;margin:auto}.profile-photo{height:420px;overflow:hidden;border:10px solid var(--paper);outline:1px solid var(--gold);outline-offset:-5px}.profile-photo img{width:100%;height:100%;object-fit:cover}.profile h3{font:500 52px/.95 var(--serif);color:var(--wine);margin:25px 0 8px}.profile p{font-size:12px;line-height:1.8;color:#766e60}.profile .script{font-size:30px;color:var(--gold)}
 /* story and date */
 .story{background:var(--wine);color:var(--cream)}.story-card{max-width:720px;margin:35px auto 0;border:1px solid #c4a66b77;padding:45px 35px}.story-card p{font:italic 22px/1.65 var(--serif)}.countdown{background:var(--green);color:var(--cream)}.count-grid{display:flex;justify-content:center;gap:12px;margin:45px auto 30px}.count-box{width:105px;padding:15px 8px;border:1px solid var(--gold);font:500 48px/1 var(--serif)}.count-box small{display:block;font:10px var(--sans);letter-spacing:.18em;text-transform:uppercase;margin-top:12px;color:var(--gold)}
 /* event */
@@ -43,7 +43,7 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
 <div class="cover" id="cover">
   <div class="cover-card"><div class="cover-inner">
     <div class="eyebrow">The Wedding of</div>
-    <img class="cover-photo" src="foto-cover.jpg" alt="Gian dan Raiga" onerror="this.style.display='none'">
+    <img class="cover-photo" src="images/foto-cover.jpg" alt="Gian dan Raiga" onerror="this.style.display='none'">
     <div class="script">Together with love</div>
     <h1>Gian <span style="font-size:.55em;color:var(--wine)">&</span><br>Raiga</h1>
     <div class="cover-date">03 . 01 . 2027</div>
@@ -83,8 +83,8 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
   <div class="eyebrow">The Bride & The Groom</div><h2 class="heading">Meet the Couple</h2><div class="ornament">❧</div>
   <p class="sub">Dua hati, satu tujuan, dan perjalanan baru yang akan kami mulai bersama.</p>
   <div class="profiles">
-   <article class="profile"><div class="profile-photo"><img src="gian.jpg" alt="Gian Bachtiar"></div><h3>Gian Bachtiar</h3><div class="script">The Groom</div><p>Putra dari keluarga besar<br>Gian Bachtiar</p></article>
-   <article class="profile"><div class="profile-photo"><img src="raiga.jpg" alt="Raiga Oktabena"></div><h3>Raiga Oktabena</h3><div class="script">The Bride</div><p>Putri dari keluarga besar<br>Raiga Oktabena</p></article>
+   <article class="profile"><div class="profile-photo"><img src="images/gian.jpg" alt="Gian Bachtiar"></div><h3>Gian Bachtiar</h3><div class="script">The Groom</div><p>Putra dari keluarga besar<br>Gian Bachtiar</p></article>
+   <article class="profile"><div class="profile-photo"><img src="images/raiga.jpg" alt="Raiga Oktabena"></div><h3>Raiga Oktabena</h3><div class="script">The Bride</div><p>Putri dari keluarga besar<br>Raiga Oktabena</p></article>
   </div>
  </div>
 </section>
