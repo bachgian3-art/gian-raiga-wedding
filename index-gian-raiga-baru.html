@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b2e">
+<meta name="description" content="Undangan pernikahan Gian & Raiga — 3 Januari 2027">
+<title>Gian & Raiga — The Wedding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#641f2c;--wine2:#3d111c;--green:#173b2e;--green2:#0d281f;--cream:#f5efdf;--paper:#fffaf0;--gold:#c4a66b;--ink:#28271f;--muted:#c8c1ae;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--script:'Great Vibes',cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300}body.lock{overflow:hidden}img{max-width:100%;display:block}button,input,textarea,select{font:inherit}.serif{font-family:var(--serif)}.script{font-family:var(--script)}.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}.wrap{width:min(1100px,90%);margin:auto}.section{padding:100px 0;position:relative;overflow:hidden}.center{text-align:center}.heading{font:500 clamp(45px,7vw,82px)/.95 var(--serif);margin:12px 0 20px}.sub{max-width:570px;margin:0 auto;line-height:1.9;font-size:14px}.ornament{color:var(--gold);letter-spacing:.5em;margin:22px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 25px;border:1px solid var(--gold);background:var(--gold);color:#211b12;text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:600;cursor:pointer;transition:.3s}.btn:hover{transform:translateY(-3px);background:#d8bd87}.btn.ghost{background:transparent;color:var(--cream)}.dark{color:var(--cream);background:var(--green)}.wine{color:var(--cream);background:var(--wine)}.paper{background:var(--cream);color:var(--ink)}
+/* opening cover */
+.cover{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:var(--wine2);transition:opacity .9s,visibility .9s;color:var(--ink)}
+.cover.hide{opacity:0;visibility:hidden;pointer-events:none}.cover-card{width:min(520px,100%);min-height:min(760px,92vh);background:var(--cream);padding:18px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;box-shadow:0 25px 80px #0005}.cover-card:before{content:"";position:absolute;inset:12px;border:1px solid var(--gold);pointer-events:none}.cover-inner{position:relative;z-index:1;width:100%;padding:35px 24px}.cover-photo{width:min(230px,70%);height:270px;object-fit:cover;margin:25px auto 20px;filter:saturate(.82)}.cover h1{font:500 clamp(54px,12vw,84px)/.86 var(--serif);margin:12px 0;color:var(--green)}.cover .script{font-size:35px;color:var(--wine)}.cover-date{font:500 17px var(--serif);letter-spacing:.2em;margin:18px 0 25px}.cover-to{font-size:11px;letter-spacing:.15em;color:#777}.cover .btn{margin-top:18px}
+/* hero */
+.hero{min-height:100vh;background:var(--cream);display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 8%}.hero-copy h2{font:500 clamp(65px,10vw,130px)/.78 var(--serif);color:var(--green);margin:28px 0}.hero-copy .amp{font:italic 42px var(--script);color:var(--wine)}.hero-copy p{max-width:310px;font-size:12px;line-height:1.9;letter-spacing:.08em}.hero-photo{min-height:650px;position:relative}.hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.hero-photo:after{content:"";position:absolute;inset:18px;border:1px solid #f5efdf9c;pointer-events:none}
+.quote{background:var(--wine);color:var(--cream);text-align:center;padding:95px 20px}.quote blockquote{max-width:700px;margin:22px auto;font:italic 28px/1.45 var(--serif)}.quote .script{font-size:40px;color:var(--gold)}
+/* profile */
+.couple{background:var(--cream)}.profiles{display:grid;grid-template-columns:1fr 1fr;gap:70px;max-width:850px;margin:50px auto 0}.profile{max-width:340px;margin:auto}.profile-photo{height:420px;overflow:hidden;border:10px solid var(--paper);outline:1px solid var(--gold);outline-offset:-5px}.profile-photo img{width:100%;height:100%;object-fit:cover}.profile h3{font:500 52px/.95 var(--serif);color:var(--wine);margin:25px 0 8px}.profile p{font-size:12px;line-height:1.8;color:#766e60}.profile .script{font-size:30px;color:var(--gold)}
+/* story and date */
+.story{background:var(--wine);color:var(--cream)}.story-card{max-width:720px;margin:35px auto 0;border:1px solid #c4a66b77;padding:45px 35px}.story-card p{font:italic 22px/1.65 var(--serif)}.countdown{background:var(--green);color:var(--cream)}.count-grid{display:flex;justify-content:center;gap:12px;margin:45px auto 30px}.count-box{width:105px;padding:15px 8px;border:1px solid var(--gold);font:500 48px/1 var(--serif)}.count-box small{display:block;font:10px var(--sans);letter-spacing:.18em;text-transform:uppercase;margin-top:12px;color:var(--gold)}
+/* event */
+.event-panel{background:var(--cream);color:var(--green);width:min(620px,92%);margin:45px auto 0;padding:45px 25px;position:relative;clip-path:polygon(0 4%,50% 0,100% 4%,100% 96%,50% 100%,0 96%)}.event-panel h3{font:500 42px var(--serif);margin:0 0 10px}.event-panel p{font-size:13px;line-height:1.9}.event-panel .divider{width:65px;height:1px;background:var(--gold);margin:25px auto}
+.mapbox{max-width:700px;margin:35px auto 0;border:1px solid #c4a66b66;padding:10px}.mapbox iframe{width:100%;height:330px;border:0;display:block}.dress-dots{display:flex;justify-content:center;gap:13px;margin:28px 0}.dress-dots i{width:36px;height:36px;border-radius:50%;display:block;border:1px solid #fff6}.dress-note{font-size:12px;line-height:1.8}
+/* gallery */
+.gallery{background:var(--green);color:var(--cream)}.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:45px auto 0;max-width:950px}.gallery-grid figure{margin:0;overflow:hidden;border:1px solid #c4a66b77;padding:7px;background:#ffffff0b}.gallery-grid figure:nth-child(1){grid-column:span 7;grid-row:span 2}.gallery-grid figure:nth-child(2){grid-column:span 5}.gallery-grid figure:nth-child(3){grid-column:span 5}.gallery-grid figure:nth-child(4){grid-column:span 4}.gallery-grid figure:nth-child(5){grid-column:span 4}.gallery-grid figure:nth-child(6){grid-column:span 4}.gallery-grid img{width:100%;height:100%;min-height:220px;object-fit:cover;transition:transform .7s;filter:saturate(.86)}.gallery-grid figure:hover img{transform:scale(1.04)}.gallery-grid figure:first-child img{min-height:560px}
+/* gift / rsvp */
+.gift{background:var(--wine);color:var(--cream)}.gift-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:700px;margin:40px auto}.bank{background:var(--cream);color:var(--ink);padding:28px 24px;text-align:left;border:1px solid var(--gold)}.bank strong{font:600 34px var(--serif);color:var(--wine)}.bank p{font-size:12px;line-height:1.8}.bank-number{font:500 21px var(--sans);letter-spacing:.06em}.copy{border:1px solid var(--gold);background:transparent;color:var(--wine);padding:9px 14px;font-size:10px;letter-spacing:.12em;cursor:pointer}
+.rsvp{background:var(--cream);color:var(--green)}.rsvp-layout{display:grid;grid-template-columns:1fr 1fr;gap:35px;max-width:900px;margin:45px auto 0;text-align:left}.form-card,.wishes-card{border:1px solid #c4a66b;padding:28px;background:var(--paper)}.field{margin-bottom:15px}.field label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid #d7cdbb;background:#fffdf8;color:var(--ink);outline:none}.field textarea{min-height:90px;resize:vertical}.emojis{display:flex;gap:8px;flex-wrap:wrap}.emojis button{border:1px solid #d7cdbb;background:white;padding:8px 10px;cursor:pointer;font-size:20px}.emojis button.selected{border-color:var(--wine);background:#f4e4e5}.wishes{max-height:390px;overflow:auto}.wish{padding:14px 0;border-bottom:1px solid #e4dac8}.wish strong{font:600 21px var(--serif)}.wish small{display:block;color:#887f70;font-size:10px}.wish p{font-size:13px;margin:6px 0}.status{font-size:12px;margin-top:12px;min-height:20px}
+footer{background:var(--green2);color:var(--cream);text-align:center;padding:70px 20px}footer .script{font-size:55px;color:var(--gold)}footer p{font:italic 20px var(--serif)}
+/* floating controls */
+.float-nav{position:fixed;right:13px;top:50%;transform:translateY(-50%);z-index:15;display:flex;flex-direction:column;gap:7px}.float-nav a,.float-nav button{width:39px;height:39px;border:1px solid var(--gold);background:var(--cream);color:var(--green);display:grid;place-items:center;text-decoration:none;font-size:15px;cursor:pointer;box-shadow:0 3px 12px #0002}.music{position:fixed;left:16px;bottom:16px;z-index:16;border:1px solid var(--gold);background:var(--wine);color:var(--cream);padding:11px 14px;border-radius:30px;font-size:11px;cursor:pointer}
+@media(max-width:700px){.section{padding:75px 0}.hero{grid-template-columns:1fr}.hero-copy{min-height:65vh;order:2}.hero-photo{min-height:65vh;order:1}.profiles{gap:35px}.profile-photo{height:300px}.profile h3{font-size:42px}.count-box{width:76px;font-size:37px}.gallery-grid{gap:8px}.gallery-grid figure{padding:4px}.gallery-grid figure:first-child img{min-height:390px}.gallery-grid img{min-height:170px}.rsvp-layout{grid-template-columns:1fr}.float-nav{right:7px}.float-nav a,.float-nav button{width:34px;height:34px}.gift-cards{grid-template-columns:1fr}.cover-card{min-height:85vh}}
+@media(max-width:420px){.profiles{grid-template-columns:1fr}.profile{max-width:290px}.profile-photo{height:350px}.count-grid{gap:6px}.count-box{width:67px;padding:12px 4px;font-size:32px}.count-box small{font-size:8px}.gallery-grid figure:nth-child(n){grid-column:span 6}.gallery-grid figure:first-child{grid-column:span 12}.gallery-grid figure:first-child img{min-height:430px}}
+</style>
+</head>
+<body class="lock">
+
+<!-- GANTI nama file foto di src jika nama di repository Anda berbeda. -->
+<div class="cover" id="cover">
+  <div class="cover-card"><div class="cover-inner">
+    <div class="eyebrow">The Wedding of</div>
+    <img class="cover-photo" src="foto-cover.jpg" alt="Gian dan Raiga" onerror="this.style.display='none'">
+    <div class="script">Together with love</div>
+    <h1>Gian <span style="font-size:.55em;color:var(--wine)">&</span><br>Raiga</h1>
+    <div class="cover-date">03 . 01 . 2027</div>
+    <div class="cover-to">Kepada Yth. Bapak/Ibu/Saudara/i</div>
+    <div style="font:italic 22px var(--serif);margin-top:5px" id="guestName">Tamu Undangan</div>
+    <button class="btn" id="openInvite">Open Invitation <span>↗</span></button>
+  </div></div>
+</div>
+
+<nav class="float-nav" aria-label="Navigasi">
+  <a href="#home" title="Home">⌂</a><a href="#couple" title="Mempelai">♡</a><a href="#event" title="Acara">✧</a><a href="#gallery" title="Galeri">▧</a><a href="#rsvp" title="RSVP">✉</a>
+</nav>
+<button class="music" id="musicBtn">♫ Musik</button>
+<audio id="bgMusic" loop preload="none"><source src="instrumental-romantis.mp3" type="audio/mpeg"></audio>
+
+<header class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">The Wedding Celebration</div>
+    <h2>Gian <span class="amp">&</span><br>Raiga</h2>
+    <div class="ornament">✦ ───── ✦</div>
+    <p>DENGAN PENUH RASA SYUKUR, KAMI MENGUNDANG ANDA UNTUK MENJADI BAGIAN DARI HARI ISTIMEWA KAMI.</p>
+    <div class="cover-date">SUNDAY · 03 JANUARY 2027</div>
+    <a class="btn" href="#event">Save the Date</a>
+  </div>
+  <div class="hero-photo"><img src="foto-cover.jpg" alt="Prewedding Gian dan Raiga"></div>
+</header>
+
+<section class="quote">
+  <div class="eyebrow">A little note of love</div>
+  <blockquote>“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram di sisinya.”</blockquote>
+  <div class="script">Gian & Raiga</div><div class="eyebrow">Ar-Rum : 21</div>
+</section>
+
+<section class="section couple center" id="couple">
+ <div class="wrap">
+  <div class="eyebrow">The Bride & The Groom</div><h2 class="heading">Meet the Couple</h2><div class="ornament">❧</div>
+  <p class="sub">Dua hati, satu tujuan, dan perjalanan baru yang akan kami mulai bersama.</p>
+  <div class="profiles">
+   <article class="profile"><div class="profile-photo"><img src="foto%20profil.jpg" alt="Gian Bachtiar"></div><h3>Gian Bachtiar</h3><div class="script">The Groom</div><p>Putra dari keluarga besar<br>Gian Bachtiar</p></article>
+   <article class="profile"><div class="profile-photo"><img src="foto%20profil%201.jpg" alt="Raiga Oktabena"></div><h3>Raiga Oktabena</h3><div class="script">The Bride</div><p>Putri dari keluarga besar<br>Raiga Oktabena</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section story center">
+ <div class="wrap"><div class="eyebrow">Our journey</div><h2 class="heading">A Story to Tell</h2><div class="ornament">✦</div>
+  <div class="story-card"><p>Setiap pertemuan memiliki cerita, setiap langkah membawa makna. Dengan penuh rasa syukur, kami memilih untuk melangkah bersama, merangkai hari esok dalam cinta, doa, dan kesetiaan.</p><div class="script" style="font-size:42px;color:var(--gold)">Forever starts here</div></div>
+ </div>
+</section>
+
+<section class="section countdown center">
+ <div class="wrap"><div class="eyebrow">Counting down to our day</div><h2 class="heading">The Big Day</h2><p class="sub">Menuju hari bahagia kami</p>
+  <div class="count-grid"><div class="count-box"><span id="days">00</span><small>Days</small></div><div class="count-box"><span id="hours">00</span><small>Hours</small></div><div class="count-box"><span id="minutes">00</span><small>Minutes</small></div><div class="count-box"><span id="seconds">00</span><small>Seconds</small></div></div>
+  <div class="eyebrow">Sunday · 3 January 2027</div>
+ </div>
+</section>
+
+<section class="section dark center" id="event">
+ <div class="wrap"><div class="eyebrow">Join our celebration</div><h2 class="heading">The Wedding Day</h2><p class="sub">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.</p>
+  <div class="event-panel"><div class="eyebrow">Sunday · 03 January 2027</div><h3>Wedding Reception</h3><p>Waktu acara akan diinformasikan lebih lanjut</p><div class="divider"></div><h3>Kedai Selasih</h3><p>Jl. Cikutra Baru VI No.34, Neglasari,<br>Kec. Cibeunying Kaler, Kota Bandung,<br>Jawa Barat 40124</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kedai+Selasih+Jl.+Cikutra+Baru+VI+No.34+Bandung">View Google Maps ↗</a></div>
+ </div>
+</section>
+
+<section class="section dark center" style="padding-top:10px">
+ <div class="wrap"><div class="eyebrow">A little guide</div><h2 class="heading">Dress Code</h2><p class="dress-note">Kami mengundang Anda mengenakan busana terbaik dengan nuansa warna earth tone, cream, maroon, atau dark green.</p>
+  <div class="dress-dots"><i style="background:#641f2c"></i><i style="background:#173b2e"></i><i style="background:#f5efdf"></i><i style="background:#bba88b"></i><i style="background:#9a725f"></i></div>
+ </div>
+</section>
+
+<section class="section gallery center" id="gallery">
+ <div class="wrap"><div class="eyebrow">Captured moments</div><h2 class="heading">Our Gallery</h2><div class="ornament">✧</div><p class="sub">Beberapa cerita kecil yang menjadi bagian dari perjalanan kami.</p>
+  <div class="gallery-grid">
+   <figure><img src="galeri%201.jpg" alt="Momen prewedding 1"></figure>
+   <figure><img src="galeri%202.jpg" alt="Momen prewedding 2"></figure>
+   <figure><img src="galeri%203.jpg" alt="Momen prewedding 3"></figure>
+   <figure><img src="galeri%204.jpg" alt="Momen prewedding 4"></figure>
+   <figure><img src="galeri%205.jpg" alt="Momen prewedding 5"></figure>
+   <figure><img src="foto-cover.jpg" alt="Gian dan Raiga"></figure>
+  </div>
+ </div>
+</section>
+
+<section class="section gift center" id="gift">
+ <div class="wrap"><div class="eyebrow">A token of love</div><h2 class="heading">Wedding Gift</h2><div class="ornament">❧</div><p class="sub">Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila ingin berbagi tanda kasih, dapat melalui rekening berikut.</p>
+  <div class="gift-cards">
+   <div class="bank"><strong>BCA</strong><p class="eyebrow" style="color:#8d7951">Bank Central Asia</p><div class="bank-number">3372 173 839</div><p>Atas nama: <b>Raiga Oktabena</b></p><button class="copy" data-copy="3372173839">SALIN NOMOR REKENING</button></div>
+   <div class="bank"><strong>BRI</strong><p class="eyebrow" style="color:#8d7951">Bank Rakyat Indonesia</p><div class="bank-number">2104 0101 2640 507</div><p>Atas nama: <b>Gian Bachtiar</b></p><button class="copy" data-copy="210401012640507">SALIN NOMOR REKENING</button></div>
+  </div>
+ </div>
+</section>
+
+<section class="section rsvp center" id="rsvp">
+ <div class="wrap"><div class="eyebrow">Leave your wishes</div><h2 class="heading">RSVP & Wishes</h2><p class="sub">Mohon konfirmasi kehadiran dan tinggalkan doa terbaik untuk kami.</p>
+  <div class="rsvp-layout">
+   <form class="form-card" id="rsvpForm">
+    <div class="field"><label for="name">Nama</label><input id="name" name="name" maxlength="60" required placeholder="Nama Anda"></div>
+    <div class="field"><label for="attendance">Attendance</label><select id="attendance" name="attendance" required><option value="">Pilih konfirmasi</option><option>Hadir</option><option>Tidak dapat hadir</option><option>Masih tentatif</option></select></div>
+    <div class="field"><label for="message">Message</label><textarea id="message" name="message" maxlength="500" required placeholder="Tuliskan doa dan ucapan..."></textarea></div>
+    <div class="field"><label>Sticker emoticon</label><div class="emojis" id="emojiPicker"><button type="button" class="selected" data-emoji="❤️">❤️</button><button type="button" data-emoji="🥰">🥰</button><button type="button" data-emoji="💐">💐</button><button type="button" data-emoji="🎉">🎉</button><button type="button" data-emoji="✨">✨</button><button type="button" data-emoji="🤍">🤍</button></div></div>
+    <button class="btn" type="submit">Send Wishes ↗</button><div class="status" id="formStatus"></div>
+   </form>
+   <div class="wishes-card"><div class="eyebrow" style="color:#9b8050">Guest book</div><h3 style="font:500 36px var(--serif);margin:5px 0 15px">Your Wishes</h3><div class="wishes" id="wishes"><p style="font-size:12px;color:#887f70">Ucapan akan muncul di sini setelah Google Sheets terhubung.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<footer><div class="eyebrow">With love</div><div class="script">Gian & Raiga</div><p>We can't wait to celebrate with you.</p><div class="ornament">✦ ───── ✦</div><small style="font-size:10px;letter-spacing:.15em">© 2027 GIAN & RAIGA</small></footer>
+
+<script>
+/* PENTING: tempel URL Web App Google Apps Script Anda di bawah ini.
+   Format: https://script.google.com/macros/s/...../exec */
+const CONFIG = { googleScriptUrl: "" };
+let selectedEmoji = "❤️";
+const cover = document.getElementById("cover");
+document.getElementById("openInvite").addEventListener("click",()=>{
+ cover.classList.add("hide");document.body.classList.remove("lock");
+ const audio=document.getElementById("bgMusic");audio.play().then(()=>document.getElementById("musicBtn").textContent="♫ Musik ON").catch(()=>{});
+});
+document.getElementById("musicBtn").addEventListener("click",()=>{
+ const a=document.getElementById("bgMusic"),b=document.getElementById("musicBtn");
+ if(a.paused){a.play().then(()=>b.textContent="♫ Musik ON").catch(()=>b.textContent="Musik belum tersedia");}
+ else{a.pause();b.textContent="♫ Musik";}
+});
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",async()=>{
+ try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent="TERSALIN ✓";setTimeout(()=>b.textContent="SALIN NOMOR REKENING",1800)}
+ catch(e){b.textContent="Salin manual: "+b.dataset.copy}
+}));
+document.getElementById("emojiPicker").addEventListener("click",e=>{
+ const b=e.target.closest("[data-emoji]");if(!b)return;
+ selectedEmoji=b.dataset.emoji;document.querySelectorAll("[data-emoji]").forEach(x=>x.classList.toggle("selected",x===b));
+});
+const target=new Date("2027-01-03T10:00:00+07:00").getTime();
+function tick(){let d=Math.max(0,target-Date.now());for(const [id,n] of [["days",86400000],["hours",3600000],["minutes",60000],["seconds",1000]]){document.getElementById(id).textContent=String(Math.floor(d/n)).padStart(2,"0");d%=n}}
+tick();setInterval(tick,1000);
+function jsonp(url){return new Promise((resolve,reject)=>{const cb="grcb"+Date.now();const s=document.createElement("script");window[cb]=data=>{resolve(data);delete window[cb];s.remove()};s.onerror=()=>{reject(new Error("Gagal memuat komentar"));delete window[cb];s.remove()};s.src=url+(url.includes("?")?"&":"?")+"callback="+cb+"&_="+Date.now();document.body.appendChild(s);setTimeout(()=>{if(window[cb]){delete window[cb];s.remove();reject(new Error("Waktu tunggu habis"))}},12000)})}
+function renderWishes(items){const el=document.getElementById("wishes");el.innerHTML="";if(!items||!items.length){el.innerHTML="<p style='font-size:12px;color:#887f70'>Belum ada ucapan. Jadilah yang pertama!</p>";return}items.slice().reverse().forEach(x=>{const div=document.createElement("div");div.className="wish";const name=document.createElement("strong");name.textContent=(x.emoji||"❤️")+" "+x.name;const small=document.createElement("small");small.textContent=(x.attendance||"")+" · "+(x.date||"");const p=document.createElement("p");p.textContent=x.message;div.append(name,small,p);el.appendChild(div)})}
+async function loadWishes(){if(!CONFIG.googleScriptUrl){document.getElementById("wishes").innerHTML="<p style='font-size:12px;color:#887f70'>Google Sheets belum dihubungkan. Masukkan URL Web App pada CONFIG di index.html.</p>";return}try{const d=await jsonp(CONFIG.googleScriptUrl);renderWishes(d.comments||[])}catch(e){document.getElementById("wishes").textContent="Komentar belum dapat dimuat. Periksa URL Google Sheets."}}
+document.getElementById("rsvpForm").addEventListener("submit",async e=>{
+ e.preventDefault();const status=document.getElementById("formStatus");
+ if(!CONFIG.googleScriptUrl){status.textContent="Google Sheets belum terhubung. Isi URL Web App terlebih dahulu.";return}
+ const data={name:document.getElementById("name").value.trim(),attendance:document.getElementById("attendance").value,message:document.getElementById("message").value.trim(),emoji:selectedEmoji};
+ if(!data.name||!data.attendance||!data.message){status.textContent="Mohon lengkapi semua kolom.";return}
+ status.textContent="Mengirim ucapan…";
+ try{await fetch(CONFIG.googleScriptUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});
+ status.textContent="Terima kasih! Ucapan Anda telah dikirim.";e.target.reset();selectedEmoji="❤️";document.querySelectorAll("[data-emoji]").forEach((x,i)=>x.classList.toggle("selected",i===0));setTimeout(loadWishes,1800);
+ }catch(err){status.textContent="Belum berhasil mengirim. Silakan coba kembali."}
+});
+loadWishes();
+const params=new URLSearchParams(location.search);if(params.get("to"))document.getElementById("guestName").textContent=params.get("to").replace(/\+/g," ");
+</script>
+</body>
+</html>
