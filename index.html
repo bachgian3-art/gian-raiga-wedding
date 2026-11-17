@@ -178,7 +178,7 @@
     /* Gallery */
     .gallery { background: var(--cream); }
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 35px; }
-    .gallery-item { aspect-ratio: 4/5; overflow: hidden; background: var(--cream-deep); }
+    .gallery-item { aspect-ratio: 4/5; overflow: hidden; background: var(--cream-deep); border-radius: 3px; }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
     .gallery-item:hover img { transform: scale(1.05); }
 
@@ -214,13 +214,52 @@
     .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
     .fade-up.visible { opacity: 1; transform: none; }
 
+
+    /* Wedding gift */
+    .gift { background: var(--green); color: var(--cream); }
+    .gift .section-title { color: var(--cream); }
+    .gift .section-intro { color: #d8d5c9; }
+    .gift-card {
+      max-width: 560px; margin: 32px auto 0; padding: 28px 22px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(210,184,133,.55);
+    }
+    .gift-card h3 { margin: 6px 0; color: #e4c995; font: 500 2rem var(--serif); }
+    .gift-card p { color: #e0d9cc; margin: 7px 0; }
+    .gift-placeholder { display: inline-block; margin-top: 12px; padding: 9px 13px; border: 1px dashed rgba(210,184,133,.6); color: #e4c995; font-size: .82rem; }
+
+    /* RSVP comments */
+    .rsvp-form {
+      max-width: 650px; margin: 32px auto 0; padding: 25px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(210,184,133,.45);
+      text-align: left;
+    }
+    .rsvp-form label { display: block; margin: 14px 0 6px; color: #f0e6d8; font-size: .78rem; letter-spacing: .06em; }
+    .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+      width: 100%; padding: 12px 13px; border: 1px solid rgba(210,184,133,.5);
+      border-radius: 2px; background: #fffdf8; color: #302a25; font: 400 .92rem var(--sans);
+    }
+    .rsvp-form textarea { min-height: 105px; resize: vertical; }
+    .emoji-picker { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .emoji-choice {
+      min-width: 42px; min-height: 42px; border: 1px solid rgba(210,184,133,.55);
+      background: transparent; color: white; border-radius: 4px; font-size: 1.35rem; cursor: pointer;
+    }
+    .emoji-choice.selected { background: var(--gold); border-color: var(--gold); color: #241d16; }
+    .comments-list { max-width: 650px; margin: 28px auto 0; text-align: left; }
+    .comment-item { padding: 16px 0; border-bottom: 1px solid rgba(210,184,133,.35); }
+    .comment-item strong { color: #f1d9ae; }
+    .comment-item p { margin: 5px 0; color: #e7d9c7; overflow-wrap: anywhere; }
+    .comment-meta { color: #c6b8a7; font-size: .72rem; }
+    .form-hint { color: #d9cbb9; font-size: .75rem; margin-top: 13px; line-height: 1.6; }
+    .form-status { min-height: 22px; margin-top: 12px; color: #f1d9ae; font-size: .82rem; }
+
     @media (max-width: 640px) {
       .section { padding: 68px 19px; }
       .couple-grid { gap: 12px; }
       .person h3 { font-size: 2rem; }
       .event-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item:last-child { display: none; }
       .map-frame { height: 280px; }
     }
   </style>
@@ -322,9 +361,11 @@
         <h2 class="section-title">Our Gallery</h2>
         <p class="section-intro">Beberapa momen yang ingin kami kenang selamanya.</p>
         <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/gallery-1.jpg" alt="Galeri foto 1"></div>
-          <div class="gallery-item"><img src="images/gallery-2.jpg" alt="Galeri foto 2"></div>
-          <div class="gallery-item"><img src="images/gallery-3.jpg" alt="Galeri foto 3"></div>
+          <div class="gallery-item"><img src="images/gallery-1.jpg" alt="Gian dan Raiga duduk bersama di taman"></div>
+          <div class="gallery-item"><img src="images/gallery-2.jpg" alt="Momen romantis Gian dan Raiga di taman"></div>
+          <div class="gallery-item"><img src="images/gallery-3.jpg" alt="Potret Gian dan Raiga bersama buket bunga"></div>
+          <div class="gallery-item"><img src="images/gallery-4.jpg" alt="Gian dan Raiga berfoto bersama di rerumputan"></div>
+          <div class="gallery-item"><img src="images/gallery-5.jpg" alt="Gian dan Raiga berdiri berdampingan di taman"></div>
         </div>
       </div>
     </section>
@@ -360,13 +401,36 @@
         <div class="venue">Kedai Selasih</div>
         <p class="section-intro">Kami menantikan kehadiran Anda. Silakan buka peta untuk mencari lokasi acara.</p>
         <iframe class="map-frame"
-          src="https://www.google.com/maps?q=Kedai%20Selasih&output=embed"
+          src="https://www.google.com/maps?q=Jl.%20Cikutra%20Baru%20VI%20No.34%2C%20Neglasari%2C%20Kec.%20Cibeunying%20Kaler%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040124&output=embed"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Peta menuju Kedai Selasih"></iframe>
         <a class="btn btn-gold" style="margin-top:18px;"
-          href="https://www.google.com/maps/search/?api=1&amp;query=Kedai%20Selasih"
+          href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Cikutra%20Baru%20VI%20No.34%2C%20Neglasari%2C%20Kec.%20Cibeunying%20Kaler%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040124"
           target="_blank" rel="noopener">Buka Google Maps ↗</a>
-        <p style="font-size:.76rem;color:var(--muted);margin-top:12px;">Mohon pastikan titik Kedai Selasih yang benar setelah alamat lengkap dikonfirmasi.</p>
+        <p style="font-size:.76rem;color:var(--muted);margin-top:12px;">Alamat yang digunakan: Jl. Cikutra Baru VI No.34, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124. Periksa pin peta sebelum undangan dibagikan.</p>
+      </div>
+    </section>
+
+    <section class="section gift center">
+      <div class="container fade-up">
+        <div class="eyebrow">A little token of love</div>
+        <h2 class="section-title">Wedding Gift</h2>
+        <p class="section-intro">Doa restu Anda merupakan hadiah terindah bagi kami. Namun, apabila berkenan berbagi tanda kasih, informasi hadiah akan kami sediakan di sini.</p>
+        <div class="gift-card">
+          <div class="ornament">✦</div>
+          <h3>Bank BCA</h3>
+          <p>Nomor rekening</p>
+          <strong id="bca-account-display" style="display:block;color:#fffdf8;font-size:1.15rem;letter-spacing:.08em;">3372173839</strong>
+          <p id="bca-holder-display">Atas nama: Raiga Oktabena</p>
+          <button class="btn btn-gold" type="button" id="copy-bca" style="margin-top:10px;">Salin nomor rekening</button>
+          <div class="ornament">✦</div>
+          <h3>Bank BRI</h3>
+          <p>Nomor rekening</p>
+          <strong id="bri-account-display" style="display:block;color:#fffdf8;font-size:1.15rem;letter-spacing:.08em;">2104 0101 2640 507</strong>
+          <p id="bri-holder-display">Atas nama: Gian Bachtiar</p>
+          <button class="btn btn-gold" type="button" id="copy-bri" style="margin-top:10px;">Salin nomor rekening</button>
+          <p class="gift-placeholder">Terima kasih atas tanda kasih dan doa yang diberikan untuk Gian &amp; Raiga.</p>
+        </div>
       </div>
     </section>
 
@@ -374,9 +438,44 @@
       <div class="container fade-up">
         <div class="eyebrow">Your presence means a lot</div>
         <h2 class="section-title">RSVP &amp; Wishes</h2>
-        <p class="section-intro">Merupakan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.</p>
-        <p class="rsvp-note">Untuk konfirmasi kehadiran dan mengirim ucapan, silakan hubungi kami melalui WhatsApp.</p>
-        <a class="btn btn-gold" id="rsvp-button" href="#" target="_blank" rel="noopener">Konfirmasi via WhatsApp ↗</a>
+        <p class="section-intro">Silakan konfirmasi kehadiran dan tinggalkan doa serta ucapan terbaik untuk Gian &amp; Raiga.</p>
+
+        <form class="rsvp-form" id="rsvp-form">
+          <label for="comment-name">Nama</label>
+          <input id="comment-name" name="name" type="text" maxlength="60" placeholder="Masukkan nama Anda" required>
+
+          <label for="comment-attendance">Attendance / Kehadiran</label>
+          <select id="comment-attendance" name="attendance" required>
+            <option value="">Pilih konfirmasi kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak dapat hadir">Tidak dapat hadir</option>
+            <option value="Masih tentatif">Masih tentatif</option>
+          </select>
+
+          <label for="comment-message">Message / Ucapan</label>
+          <textarea id="comment-message" name="message" maxlength="500" placeholder="Tuliskan doa dan ucapan untuk kedua mempelai..." required></textarea>
+
+          <label>Sticker emoticon</label>
+          <div class="emoji-picker" role="group" aria-label="Pilih emoticon">
+            <button type="button" class="emoji-choice selected" data-emoji="❤️" aria-label="Hati merah">❤️</button>
+            <button type="button" class="emoji-choice" data-emoji="🥰" aria-label="Wajah tersenyum dengan hati">🥰</button>
+            <button type="button" class="emoji-choice" data-emoji="💐" aria-label="Buket bunga">💐</button>
+            <button type="button" class="emoji-choice" data-emoji="🎉" aria-label="Perayaan">🎉</button>
+            <button type="button" class="emoji-choice" data-emoji="✨" aria-label="Bintang berkilau">✨</button>
+            <button type="button" class="emoji-choice" data-emoji="🤍" aria-label="Hati putih">🤍</button>
+          </div>
+          <input type="hidden" id="comment-emoji" value="❤️">
+
+          <button class="btn btn-gold" type="submit" style="width:100%;margin-top:22px;">Send <span aria-hidden="true">➤</span></button>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          <p class="form-hint">Ucapan dan konfirmasi kehadiran akan dikirim ke buku tamu online Gian & Raiga.</p>
+        </form>
+
+        <div class="comments-list" id="comments-list" aria-live="polite">
+          <h3 class="serif" style="font-size:1.8rem;color:#f1d9ae;font-weight:500;">Ucapan &amp; Doa</h3>
+          <div id="comments-empty" class="form-hint">Belum ada ucapan. Jadilah yang pertama mengirim doa!</div>
+          <div id="comments-items"></div>
+        </div>
       </div>
     </section>
   </main>
@@ -397,7 +496,13 @@
     // ==========================================================
     const CONFIG = {
       weddingDate: "2027-01-03T00:00:00+07:00",
-      whatsappNumber: "6281234567890" // GANTI dengan nomor WhatsApp penerima RSVP, format 62 tanpa tanda +
+      // Tempel URL Web App Google Apps Script yang berakhiran /exec.
+      googleSheetsUrl: "TEMPEL_URL_WEB_APP_GOOGLE_APPS_SCRIPT_DI_SINI",
+      // Informasi Wedding Gift
+      bcaAccountNumber: "3372173839",
+      bcaAccountHolder: "Raiga Oktabena",
+      briAccountNumber: "210401012640507",
+      briAccountHolder: "Gian Bachtiar"
     };
 
     // Nama tamu dapat ditampilkan dari link, contoh: ?to=Bapak%20Andi
@@ -452,12 +557,138 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // RSVP WhatsApp. Ganti nomor pada CONFIG di atas sebelum website dibagikan.
-    const rsvpText = encodeURIComponent(
-      "Halo Gian & Raiga, saya ingin mengonfirmasi kehadiran pada acara pernikahan tanggal 3 Januari 2027. Nama: "
-    );
-    document.getElementById("rsvp-button").href =
-      "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + rsvpText;
+    // Wedding Gift: rekening BCA dan BRI.
+    document.getElementById("bca-account-display").textContent = CONFIG.bcaAccountNumber;
+    document.getElementById("bca-holder-display").textContent = "Atas nama: " + CONFIG.bcaAccountHolder;
+    document.getElementById("bri-account-display").textContent = CONFIG.briAccountNumber.replace(/(\\d{4})(?=\\d)/g, "$1 ");
+    document.getElementById("bri-holder-display").textContent = "Atas nama: " + CONFIG.briAccountHolder;
+
+    async function copyGiftNumber(value, label) {
+      try {
+        await navigator.clipboard.writeText(value.replace(/\\s/g, ""));
+        alert(label + " berhasil disalin.");
+      } catch (error) {
+        alert("Tidak dapat menyalin otomatis. Silakan salin nomor secara manual: " + value);
+      }
+    }
+    document.getElementById("copy-bca").addEventListener("click", () =>
+      copyGiftNumber(CONFIG.bcaAccountNumber, "Nomor rekening BCA"));
+    document.getElementById("copy-bri").addEventListener("click", () =>
+      copyGiftNumber(CONFIG.briAccountNumber, "Nomor rekening BRI"));
+
+    // RSVP dan buku ucapan online melalui Google Apps Script.
+    const commentForm = document.getElementById("rsvp-form");
+    const commentsItems = document.getElementById("comments-items");
+    const commentsEmpty = document.getElementById("comments-empty");
+    const formStatus = document.getElementById("form-status");
+    let selectedEmoji = "❤️";
+
+    document.querySelectorAll(".emoji-choice").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".emoji-choice").forEach(item => item.classList.remove("selected"));
+        button.classList.add("selected");
+        selectedEmoji = button.dataset.emoji;
+        document.getElementById("comment-emoji").value = selectedEmoji;
+      });
+    });
+
+    function renderComments(comments) {
+      commentsItems.replaceChildren();
+      commentsEmpty.hidden = comments.length > 0;
+      comments.slice().reverse().forEach(comment => {
+        const article = document.createElement("article");
+        article.className = "comment-item";
+        const heading = document.createElement("strong");
+        heading.textContent = (comment.emoji || "❤️") + " " + comment.name;
+        const attendance = document.createElement("div");
+        attendance.className = "comment-meta";
+        attendance.textContent = "Konfirmasi: " + comment.attendance;
+        const message = document.createElement("p");
+        message.textContent = comment.message;
+        const date = document.createElement("div");
+        date.className = "comment-meta";
+        date.textContent = comment.date || "";
+        article.append(heading, attendance, message, date);
+        commentsItems.append(article);
+      });
+    }
+
+    function loadComments() {
+      const endpoint = CONFIG.googleSheetsUrl;
+      if (!endpoint || endpoint.startsWith("TEMPEL_")) {
+        formStatus.textContent = "Buku tamu online belum aktif. URL Google Apps Script perlu dipasang.";
+        return;
+      }
+      const callbackName = "gianRaigaCommentsCallback";
+      window[callbackName] = data => {
+        if (data && data.ok && Array.isArray(data.comments)) {
+          renderComments(data.comments);
+          formStatus.textContent = "";
+        } else {
+          formStatus.textContent = "Belum dapat memuat ucapan. Silakan muat ulang halaman.";
+        }
+        delete window[callbackName];
+        script.remove();
+      };
+      const script = document.createElement("script");
+      script.src = endpoint + "?action=list&callback=" + callbackName + "&_=" + Date.now();
+      script.onerror = () => {
+        formStatus.textContent = "Tidak dapat terhubung ke buku tamu. Periksa URL Apps Script.";
+        delete window[callbackName];
+        script.remove();
+      };
+      document.body.appendChild(script);
+    }
+
+    commentForm.addEventListener("submit", async event => {
+      event.preventDefault();
+      const name = document.getElementById("comment-name").value.trim();
+      const attendance = document.getElementById("comment-attendance").value;
+      const message = document.getElementById("comment-message").value.trim();
+      const endpoint = CONFIG.googleSheetsUrl;
+
+      if (!name || !attendance || !message) {
+        formStatus.textContent = "Mohon lengkapi nama, kehadiran, dan ucapan.";
+        return;
+      }
+      if (!endpoint || endpoint.startsWith("TEMPEL_")) {
+        formStatus.textContent = "RSVP online belum aktif. Pemilik undangan perlu memasang URL Apps Script.";
+        return;
+      }
+
+      const payload = {
+        name, attendance, message, emoji: selectedEmoji,
+        date: new Date().toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" })
+      };
+      const sendButton = commentForm.querySelector('button[type="submit"]');
+      sendButton.disabled = true;
+      sendButton.textContent = "Mengirim...";
+      formStatus.textContent = "Mengirim ucapan Anda...";
+
+      try {
+        await fetch(endpoint, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        });
+        commentForm.reset();
+        selectedEmoji = "❤️";
+        document.querySelectorAll(".emoji-choice").forEach(item => {
+          item.classList.toggle("selected", item.dataset.emoji === selectedEmoji);
+        });
+        document.getElementById("comment-emoji").value = selectedEmoji;
+        formStatus.textContent = "Ucapan dikirim. Memuat buku tamu...";
+        window.setTimeout(loadComments, 1800);
+      } catch (error) {
+        formStatus.textContent = "Pengiriman gagal. Periksa koneksi internet dan coba lagi.";
+      } finally {
+        sendButton.disabled = false;
+        sendButton.innerHTML = 'Send <span aria-hidden="true">➤</span>';
+      }
+    });
+
+    loadComments();
 
     // Animasi elemen ketika masuk layar.
     const observer = new IntersectionObserver(entries => {
