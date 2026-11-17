@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#173b2e">
+<meta name="theme-color" content="#123d32">
 <meta name="description" content="Undangan pernikahan Gian & Raiga — 3 Januari 2027">
 <title>Gian & Raiga — The Wedding</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
-:root{--wine:#641f2c;--wine2:#3d111c;--green:#173b2e;--green2:#0d281f;--cream:#f5efdf;--paper:#fffaf0;--gold:#c4a66b;--ink:#28271f;--muted:#c8c1ae;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--script:'Great Vibes',cursive}
+:root{--wine:#123d32;--wine2:#0b2922;--green:#123d32;--green2:#0b2922;--cream:#f5efdf;--paper:#fffaf0;--gold:#c4a66b;--ink:#28271f;--muted:#c8c1ae;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--script:'Great Vibes',cursive}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300}body.lock{overflow:hidden}img{max-width:100%;display:block}button,input,textarea,select{font:inherit}.serif{font-family:var(--serif)}.script{font-family:var(--script)}.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}.wrap{width:min(1100px,90%);margin:auto}.section{padding:100px 0;position:relative;overflow:hidden}.center{text-align:center}.heading{font:500 clamp(45px,7vw,82px)/.95 var(--serif);margin:12px 0 20px}.sub{max-width:570px;margin:0 auto;line-height:1.9;font-size:14px}.ornament{color:var(--gold);letter-spacing:.5em;margin:22px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 25px;border:1px solid var(--gold);background:var(--gold);color:#211b12;text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:600;cursor:pointer;transition:.3s}.btn:hover{transform:translateY(-3px);background:#d8bd87}.btn.ghost{background:transparent;color:var(--cream)}.dark{color:var(--cream);background:var(--green)}.wine{color:var(--cream);background:var(--wine)}.paper{background:var(--cream);color:var(--ink)}
 /* opening cover */
 .cover{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:var(--wine2);transition:opacity .9s,visibility .9s;color:var(--ink)}
@@ -43,7 +43,7 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
 <div class="cover" id="cover">
   <div class="cover-card"><div class="cover-inner">
     <div class="eyebrow">The Wedding of</div>
-    <img class="cover-photo" src="foto-cover.jpg" alt="Gian dan Raiga" onerror="this.style.display='none'">
+    <img class="cover-photo" src="images/foto-cover.jpg" alt="Gian dan Raiga" onerror="this.style.display='none'">
     <div class="script">Together with love</div>
     <h1>Gian <span style="font-size:.55em;color:var(--wine)">&</span><br>Raiga</h1>
     <div class="cover-date">03 . 01 . 2027</div>
@@ -57,7 +57,8 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
   <a href="#home" title="Home">⌂</a><a href="#couple" title="Mempelai">♡</a><a href="#event" title="Acara">✧</a><a href="#gallery" title="Galeri">▧</a><a href="#rsvp" title="RSVP">✉</a>
 </nav>
 <button class="music" id="musicBtn">♫ Musik</button>
-<audio id="bgMusic" loop preload="none"><source src="instrumental-romantis.mp3" type="audio/mpeg"></audio>
+<!-- Letakkan file audio yang Anda miliki secara sah di music/hanya-untukmu.mp3 -->
+<audio id="bgMusic" loop preload="none"><source src="music/hanya-untukmu.mp3" type="audio/mpeg"></audio>
 
 <header class="hero" id="home">
   <div class="hero-copy">
@@ -68,7 +69,7 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
     <div class="cover-date">SUNDAY · 03 JANUARY 2027</div>
     <a class="btn" href="#event">Save the Date</a>
   </div>
-  <div class="hero-photo"><img src="foto-cover.jpg" alt="Prewedding Gian dan Raiga"></div>
+  <div class="hero-photo"><img src="images/foto-cover.jpg" alt="Prewedding Gian dan Raiga"></div>
 </header>
 
 <section class="quote">
@@ -82,8 +83,8 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
   <div class="eyebrow">The Bride & The Groom</div><h2 class="heading">Meet the Couple</h2><div class="ornament">❧</div>
   <p class="sub">Dua hati, satu tujuan, dan perjalanan baru yang akan kami mulai bersama.</p>
   <div class="profiles">
-   <article class="profile"><div class="profile-photo"><img src="gian.jpg" alt="Gian Bachtiar"></div><h3>Gian Bachtiar</h3><div class="script">The Groom</div><p>Putra dari keluarga besar<br>Gian Bachtiar</p></article>
-   <article class="profile"><div class="profile-photo"><img src="raiga.jpg" alt="Raiga Oktabena"></div><h3>Raiga Oktabena</h3><div class="script">The Bride</div><p>Putri dari keluarga besar<br>Raiga Oktabena</p></article>
+   <article class="profile"><div class="profile-photo"><img src="images/gian.jpg" alt="Gian Bachtiar"></div><h3>Gian Bachtiar</h3><div class="script">The Groom</div><p>Putra dari keluarga besar<br>Gian Bachtiar</p></article>
+   <article class="profile"><div class="profile-photo"><img src="images/raiga.jpg" alt="Raiga Oktabena"></div><h3>Raiga Oktabena</h3><div class="script">The Bride</div><p>Putri dari keluarga besar<br>Raiga Oktabena</p></article>
   </div>
  </div>
 </section>
@@ -108,20 +109,20 @@ footer{background:var(--green2);color:var(--cream);text-align:center;padding:70p
 </section>
 
 <section class="section dark center" style="padding-top:10px">
- <div class="wrap"><div class="eyebrow">A little guide</div><h2 class="heading">Dress Code</h2><p class="dress-note">Kami mengundang Anda mengenakan busana terbaik dengan nuansa warna earth tone, cream, maroon, atau dark green.</p>
-  <div class="dress-dots"><i style="background:#641f2c"></i><i style="background:#173b2e"></i><i style="background:#f5efdf"></i><i style="background:#bba88b"></i><i style="background:#9a725f"></i></div>
+ <div class="wrap"><div class="eyebrow">A little guide</div><h2 class="heading">Dress Code</h2><p class="dress-note">Kami mengundang Anda mengenakan busana terbaik dengan nuansa warna earth tone, cream, deep green, atau earth tone.</p>
+  <div class="dress-dots"><i style="background:#123d32"></i><i style="background:#173b2e"></i><i style="background:#f5efdf"></i><i style="background:#bba88b"></i><i style="background:#9a725f"></i></div>
  </div>
 </section>
 
 <section class="section gallery center" id="gallery">
  <div class="wrap"><div class="eyebrow">Captured moments</div><h2 class="heading">Our Gallery</h2><div class="ornament">✧</div><p class="sub">Beberapa cerita kecil yang menjadi bagian dari perjalanan kami.</p>
   <div class="gallery-grid">
-   <figure><img src="galeri-1.jpg" alt="Momen prewedding 1"></figure>
-   <figure><img src="galeri-2.jpg" alt="Momen prewedding 2"></figure>
-   <figure><img src="galeri-3.jpg" alt="Momen prewedding 3"></figure>
-   <figure><img src="galeri-4.jpg" alt="Momen prewedding 4"></figure>
-   <figure><img src="galeri-5.jpg" alt="Momen prewedding 5"></figure>
-   <figure><img src="foto-cover.jpg" alt="Gian dan Raiga"></figure>
+   <figure><img src="images/galeri-1.jpg" alt="Momen prewedding 1"></figure>
+   <figure><img src="images/galeri-2.jpg" alt="Momen prewedding 2"></figure>
+   <figure><img src="images/galeri-3.jpg" alt="Momen prewedding 3"></figure>
+   <figure><img src="images/galeri-4.jpg" alt="Momen prewedding 4"></figure>
+   <figure><img src="images/galeri-5.jpg" alt="Momen prewedding 5"></figure>
+   <figure><img src="images/foto-cover.jpg" alt="Gian dan Raiga"></figure>
   </div>
  </div>
 </section>
@@ -160,12 +161,12 @@ let selectedEmoji = "❤️";
 const cover = document.getElementById("cover");
 document.getElementById("openInvite").addEventListener("click",()=>{
  cover.classList.add("hide");document.body.classList.remove("lock");
- const audio=document.getElementById("bgMusic");audio.play().then(()=>document.getElementById("musicBtn").textContent="♫ Musik ON").catch(()=>{});
+ const audio=document.getElementById("bgMusic");audio.play().then(()=>document.getElementById("musicBtn").textContent="♫ Hanya Untukmu — ON").catch(()=>{});
 });
 document.getElementById("musicBtn").addEventListener("click",()=>{
  const a=document.getElementById("bgMusic"),b=document.getElementById("musicBtn");
- if(a.paused){a.play().then(()=>b.textContent="♫ Musik ON").catch(()=>b.textContent="Musik belum tersedia");}
- else{a.pause();b.textContent="♫ Musik";}
+ if(a.paused){a.play().then(()=>b.textContent="♫ Hanya Untukmu — ON").catch(()=>b.textContent="Tambahkan file lagu");}
+ else{a.pause();b.textContent="♫ Hanya Untukmu";}
 });
 document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",async()=>{
  try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent="TERSALIN ✓";setTimeout(()=>b.textContent="SALIN NOMOR REKENING",1800)}
